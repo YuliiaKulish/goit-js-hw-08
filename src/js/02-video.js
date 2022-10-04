@@ -11,5 +11,5 @@ if (time) {
 };
 
 player.on('timeupdate',
-  throttle(evt => localStorage.setItem('videoplayer-current-time', evt.seconds, 1000)
-  ));
+  throttle(evt => localStorage.setItem('videoplayer-current-time', evt.seconds), 1000)
+  );
