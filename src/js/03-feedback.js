@@ -17,7 +17,9 @@ form.addEventListener('input', throttle((evt => {
 
 form.addEventListener('submit', (evt => {
   evt.preventDefault();
-  console.log(formData);
+  if (inputEmailValue.value !== '' || inputTextValue.value !== '') {
+    console.log(formData);
+  }
   evt.currentTarget.reset();
   localStorage.removeItem(KEEP_TEXT);
 }));
